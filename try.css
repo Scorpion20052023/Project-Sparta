@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    padding: 5px;
+}
+
+.top-icons span {
+    margin-left: 15px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 900;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.main-content {
+    margin-left: 220px;
+    margin-top: 70px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.greeting {
+    position: fixed;
+    top: 50px;
+    left: 220px;
+    width: calc(100% - 220px);
+    background-color: #f4f4f4;
+    padding: 20px;
+    z-index: 800;
+}
+
+.dashboard {
+    margin-top: 150px;
+}
+
+.card {
+    background-color: #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.transactions, .my-link {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
