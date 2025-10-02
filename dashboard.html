@@ -1,0 +1,245 @@
+<?php
+session_start();
+include("connect.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalBridge Adverts</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-image">
+            <span>ROYALBRIDGE</span>
+        </div>
+        <div class="line"></div>
+        <nav class="nav-links">
+            <a href="#" data-section="dashie"><span class="material-symbols-outlined">dashboard</span> Dashboard</a>
+            <a href="#" data-section="capital"><i class="fas fa-money-check-alt"></i> Capital</a>
+            <a href="#" data-section="transactions"><i class="fas fa-exchange-alt"></i> Transactions</a>
+            <a href="#" data-section="recharge"><i class="fas fa-mobile-alt"></i> Recharge</a>
+            <a href="#" data-section="transfer"><i class="fas fa-exchange-alt"></i> Transfer</a>
+            <a href="#" data-section="withdrawal"><i class="fas fa-wallet"></i> Withdrawal</a>
+            <a href="#" data-section="whatsapp"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+            <a href="#" data-section="myteam"><i class="fas fa-users"></i> My Team</a>
+            <a href="#" data-section="agentclaim"><i class="fas fa-user-check"></i> Agent Claim</a>
+            <a href="#" data-section="servicepackage"><i class="fas fa-box"></i> Service Package</a>
+            <a href="#" data-section="settings"><i class="fas fa-cog"></i> Settings</a>
+            <a href="logout.php"><span class="material-symbols-outlined">logout</span> Log-out</a>
+        </nav>
+    </div>
+    
+    <div class="righties">
+        <div class="top">
+            <p>RoyalBridge Adverts</p>
+            <a href="#"><span class="material-symbols-outlined">manage_accounts</span></a>
+        </div>
+    
+        <section id="dashie" class="section">
+            <div class="main-content">
+                <div class="dashboard">
+                    <div class="notification">
+                        <h1>Good morning, Cyrax6969</h1>
+                        <p> Your account is ready! We've sent you an email to confirm and claim your account. Check your inbox or Spam folder and click the link to get started. Enjoy! 😊<br>December 2, 20:47:09 PM</p>
+                    </div>
+                </div>
+
+                <p class="dash"><a href="#"><span class="material-symbols-outlined">dashboard</span>   Dashboard</a></p>
+            
+                <div class="balances">
+                    <div class="scroll-container">
+                        <div class="package">
+                            <h2 class="top-left">My Package</h2>
+                            <p class="noPackage">Upgrade Now</p>
+                            <p class="basic">Basic Package</p>
+                            <p class="premium">Basic Package</p>
+                            <p class="gold">Basic Package</p>
+                            <p class="bottom-left p_posn">NO PACKAGE</p>
+                        </div>
+                        <div class="whatsapp">
+                            <h2 class="top-left">Whatsapp Balance</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="totalwhatsapp">
+                            <h2 class="top-left">Whatsapp Withdrawal</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="totalwithdrawal">
+                            <h2 class="top-left">Total Withdrawal</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="account">
+                            <h2 class="top-left">Account Balance</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="academic">
+                            <h2 class="top-left">Academic Balance</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="cashback">
+                            <h2 class="top-left">Cashback Withdrawn</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="cashbackbalance">
+                            <h2 class="top-left">Cashback Balance</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="spinning">
+                            <h2 class="top-left">Spinning Balance</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="invested">
+                            <h2 class="top-left">Invested Earnings</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                        <div class="deposit">
+                            <h2 class="top-left">Deposit Balance</h2>
+                            <p class="bottom-left">KES 0.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <section id="capital" class="section" style="display: none;">
+            <p class="cap"><a href="#"><span class="material-symbols-outlined">payments</span> Capital</a></p>
+            <div class="container2">
+                <h1>Apply-Your Investment</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="duration">Select Duration:</label>
+                        <select id="duration" name="duration"> 
+                            <option value="1-day">1-Day</option>
+                            <option value="2-days">2-Days</option>
+                            <option value="3-days">3-Days</option>
+                            <option value="5-days">5-Days</option>
+                            <option value="10-days">10-Days</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" name="amount" value="1">
+                    </div>
+
+                    <div class="profit">
+                        Your profit: <span id="profit">1.30 KES</span> 
+                    </div>
+                    
+                    <button type="submit">Invest-Now</button>
+                </form>
+            </div>
+              
+        </section>
+        <section id="transactions" class="section" style="display: none;"> <p>Transactions content goes here...</p> </section>
+        <section id="recharge" class="section" style="display: none;"> <p>Recharge content goes here...</p> </section> 
+        <section id="transfer" class="section" style="display: none;"> <p>Transfer content goes here...</p> </section> 
+        <section id="withdrawal" class="section" style="display: none;"> <p>Withdrawal content goes here...</p> </section> 
+        <section id="whatsapp" class="section" style="display: none;">
+            <div class="container7">
+                <div class="w_product">
+                    <h2>Today's Product</h2>
+                    <div class="w_img-section">
+                        <img id="uploadedImage" alt="Uploaded Product" style="display: none;">
+                    </div>
+                    <form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data"> 
+                        <input type="file" name="productImage" id="productImage"> 
+                        <button type="submit" class="button">Upload Product Image</button> 
+                    </form>
+                    <button id="downloadButton" class="w_button" style="display: none;">Download Product</button>
+                </div> 
+                <div class="w_submit">
+                    <h2>Submit To Earn</h2>
+                    <div class="w_form-group">
+                      <input type="number" id="viewsInput" placeholder="No. Views">
+                    </div>
+                    <div class="w_form-group">
+                      <input type="number" placeholder="Your Phone">
+                    </div>
+                    <div class="receive">
+                      You'll Receive: <span id="receive">0</span>
+                    </div>
+                    <div class="w_form-group">
+                        <!-- Added id to file input for the Submit To Earn section -->
+                        <input type="file" id="earnFileInput">
+                    </div>
+                    <!-- Added id to button -->
+                    <button id="uploadNowButton" class="w_button">Upload Now</button>
+                </div>
+                <div class="w_uploads"> 
+                    <h2>My Uploads</h2>
+                    <p id="uploadPlaceholder">Your Records will Appear here</p>
+                    <!-- Container to hold uploaded file links -->
+                    <div id="uploadsList"></div>
+                </div> 
+            </div>
+        </section>
+        
+        
+        <section id="myteam" class="section" style="display: none;"> <p>My Team content goes here...</p> </section> 
+        <section id="agentclaim" class="section" style="display: none;"> <p>Agent Claim content goes here...</p> </section>
+
+        <section id="servicepackage" class="section" style="display: none;"> 
+            <div class="membership-container">
+                <div class="membership-card">
+                  <div class="logo">Elite</div>
+                  <h2>Elite Package</h2>
+                  <ul>
+                    <li>Status: Marketing</li>
+                    <li>Get 150 KSH per view</li>
+                  </ul>
+                  <div class="price">Buy 1,000.00 KES</div>
+                </div>
+                <div class="membership-card">
+                  <div class="logo">Prestige</div>
+                  <h2>Prestige Membership</h2>
+                  <ul>
+                    <li>Status: Marketing</li>
+                    <li>Get 150 KSH per view</li>
+                    <li>Account: Support</li>
+                  </ul>
+                  <div class="price">Buy 2,000.00 KES</div>
+                </div>
+                <div class="membership-card">
+                  <div class="logo">Delux</div>
+                  <h2>Delux Membership</h2>
+                  <ul>
+                    <li>Status: Marketing</li>
+                    <li>Get 150 KSH per view</li>
+                    <li>Account: Support</li>
+                    <li>Fast: Pay</li>
+                  </ul>
+                  <div class="price">Buy 3,500.00 KES</div>
+                </div>
+                <div class="membership-card">
+                  <div class="logo">Grand</div>
+                  <h2>Grand Membership</h2>
+                  <ul>
+                    <li>Status: Marketing</li>
+                    <li>Get 150 KSH per view</li>
+                    <li>Account: Support</li>
+                    <li>Fast: Pay</li>
+                    <li>Agent: Best choice</li>
+                  </ul>
+                  <div class="price">Buy 5,500.00 KES</div>
+                </div>
+              </div> 
+        </section> 
+        <section id="settings" class="section" style="display: none;"> <p>Settings content goes here...</p> </section>
+        
+    </div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="dashboard.js"></script>
+    
+</body>
+</html>
